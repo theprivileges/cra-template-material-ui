@@ -1,0 +1,26 @@
+{
+  "name": "@theprivileges/cra-template-material-ui",
+  "version": "0.0.1",
+  "description": "create react app custom template configured to use material-ui",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cra-template",
+    "create-react-app",
+    "material-ui",
+    "react",
+    "template"
+  ],
+  "author": "Luiz Lopes <luiz@wickeddeveloper.com> (https://wickeddeveloper.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/theprivileges/cra-template-material-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theprivileges/cra-template-material-ui/issues"
+  },
+  "homepage": "https://github.com/theprivileges/cra-template-material-ui#readme"
+}
