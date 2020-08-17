@@ -1,44 +1,54 @@
 {
-  "name": "@theprivileges/cra-template-material-ui",
-  "version": "0.0.0-development",
-  "description": "create react app custom template configured to use material-ui",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "semantic-release": "semantic-release"
-  },
-  "keywords": [
-    "cra-template",
-    "create-react-app",
-    "material-ui",
-    "react",
-    "template"
-  ],
-  "author": "Luiz Lopes <luiz@wickeddeveloper.com> (https://wickeddeveloper.com/)",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/theprivileges/cra-template-material-ui.git"
-  },
-  "bugs": {
-    "url": "https://github.com/theprivileges/cra-template-material-ui/issues"
-  },
-  "homepage": "https://github.com/theprivileges/cra-template-material-ui#readme",
-  "devDependencies": {
-    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
-    "cz-conventional-changelog": "3.2.0",
-    "husky": "^4.2.5",
-    "semantic-release": "^17.1.1",
-    "standard": "^14.3.4"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+    "name": "@theprivileges/cra-template-material-ui",
+    "version": "0.0.0-development",
+    "description": "create react app custom template configured to use material-ui",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "semantic-release": "semantic-release",
+        "lint": "prettier-standard --check",
+        "format": "prettier-standard --lint"
+    },
+    "keywords": [
+        "cra-template",
+        "create-react-app",
+        "material-ui",
+        "react",
+        "template"
+    ],
+    "author": "Luiz Lopes <luiz@wickeddeveloper.com> (https://wickeddeveloper.com/)",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/theprivileges/cra-template-material-ui.git"
+    },
+    "bugs": {
+        "url": "https://github.com/theprivileges/cra-template-material-ui/issues"
+    },
+    "homepage": "https://github.com/theprivileges/cra-template-material-ui#readme",
+    "devDependencies": {
+        "@jedmao/semantic-release-npm-github-config": "^1.0.9",
+        "cz-conventional-changelog": "3.2.0",
+        "husky": "^4.2.5",
+        "lint-staged": "^10.2.11",
+        "prettier-standard": "^16.4.1",
+        "semantic-release": "^17.1.1",
+        "standard": "^14.3.4"
+    },
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "lint-staged": {
+        "*": [
+            "prettier-standard --lint"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged",
+            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+        }
     }
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
-    }
-  }
 }
