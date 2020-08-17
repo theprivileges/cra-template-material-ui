@@ -1,6 +1,6 @@
 {
     "name": "@theprivileges/cra-template-material-ui",
-    "version": "1.0.0",
+    "version": "0.0.0-development",
     "description": "create react app custom template configured to use material-ui",
     "private": false,
     "engines": {
