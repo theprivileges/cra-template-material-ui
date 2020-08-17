@@ -28,7 +28,8 @@
     "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "cz-conventional-changelog": "3.2.0",
     "husky": "^4.2.5",
-    "semantic-release": "^17.1.1"
+    "semantic-release": "^17.1.1",
+    "standard": "^14.3.4"
   },
   "config": {
     "commitizen": {
