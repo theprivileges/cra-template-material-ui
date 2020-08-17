@@ -3,6 +3,7 @@
     "version": "0.0.0-development",
     "description": "create react app custom template configured to use material-ui",
     "private": false,
+    "main": "template.json",
     "engines": {
         "node": ">=10"
     },
