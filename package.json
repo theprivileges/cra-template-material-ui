@@ -3,6 +3,10 @@
     "version": "0.0.0-development",
     "description": "create react app custom template configured to use material-ui",
     "main": "index.js",
+    "private": false,
+    "engines": {
+        "node": ">=10"
+    },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "semantic-release": "semantic-release",
@@ -54,5 +58,9 @@
             "post-merge": "yarnhook",
             "post-rewrite": "yarnhook"
         }
-    }
+    },
+    "files": [
+        "template",
+        "template.json"
+    ]
 }
