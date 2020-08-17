@@ -46,7 +46,7 @@
         }
     },
     "lint-staged": {
-        "*": [
+        "*.{js,md}": [
             "prettier-standard --lint"
         ]
     },
@@ -62,5 +62,8 @@
     "files": [
         "template",
         "template.json"
-    ]
+    ],
+    "publishConfig": {
+        "access": "public"
+    }
 }
