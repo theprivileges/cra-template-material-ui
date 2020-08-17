@@ -29,9 +29,9 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
       - name: Install
-        run: yarn --no-progress --non-interactive --no-lockfile
         env:
           CI: true
+        run: yarn --no-progress --non-interactive --no-lockfile
 
   release:
     name: npm publish / GitHub release
