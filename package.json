@@ -64,6 +64,9 @@
     "*.{js,md}": [
       "prettier-standard --lint"
     ],
+    "template.json": [
+      "prettierx --write"
+    ],
     "package.json": [
       "prettier-package-json --write"
     ]
