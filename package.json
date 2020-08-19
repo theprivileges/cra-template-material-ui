@@ -21,7 +21,9 @@
     "format": "prettier-standard --lint",
     "lint": "prettier-standard --check",
     "semantic-release": "semantic-release",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests --onlyChanged",
+    "test:ci": "jest --passWithNoTests --ci",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage"
   },
   "config": {
     "commitizen": {
@@ -30,12 +32,16 @@
   },
   "devDependencies": {
     "@jedmao/semantic-release-npm-github-config": "^1.0.9",
+    "@testing-library/jest-dom": "^5.11.3",
+    "cross-env": "^7.0.2",
     "cz-conventional-changelog": "3.2.0",
     "eslint-plugin-testing-library": "^3.6.0",
     "husky": "^4.2.5",
+    "jest": "^26.4.0",
     "lint-staged": "^10.2.11",
     "prettier-package-json": "^2.1.3",
     "prettier-standard": "^16.4.1",
+    "react-test-renderer": "^16.13.1",
     "semantic-release": "^17.1.1",
     "yarnhook": "^0.4.3"
   },

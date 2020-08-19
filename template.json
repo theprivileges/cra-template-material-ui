@@ -10,7 +10,9 @@
     "scripts": {
       "format": "prettier-standard --lint",
       "lint": "prettier-standard --check",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "cross-env NODE_ENV=test jest -o",
+      "test:ci": "jest --ci",
+      "test:coverage": "jest --coverage"
     },
     "devDependencies": {
       "@testing-library/jest-dom": "^5.11.0",
@@ -21,11 +23,13 @@
       "@types/react-dom": "^16.9.0",
       "@types/react-router-dom": "^5.1.5",
       "@types/react-transition-group": "^4.2.0",
+      "cross-env": "^7.0.2",
       "eslint-plugin-testing-library": "^3.6.0",
       "husky": "^4.2.5",
       "lint-staged": "^10.2.11",
       "prettier-package-json": "^2.1.3",
       "prettier-standard": "^16.4.1",
+      "react-test-renderer": "^16.13.1",
       "yarnhook": "^0.4.3"
     },
     "dependencies": {
