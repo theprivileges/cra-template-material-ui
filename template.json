@@ -10,7 +10,6 @@
     "scripts": {
       "format": "prettier-standard --lint",
       "lint": "prettier-standard --check",
-      "test": "cross-env NODE_ENV=test jest -o",
       "test:ci": "jest --ci",
       "test:coverage": "jest --coverage"
     },
@@ -23,7 +22,6 @@
       "@types/react-dom": "^16.9.0",
       "@types/react-router-dom": "^5.1.5",
       "@types/react-transition-group": "^4.2.0",
-      "cross-env": "^7.0.2",
       "eslint-plugin-testing-library": "^3.6.0",
       "husky": "^4.2.5",
       "lint-staged": "^10.2.11",
