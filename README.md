@@ -12,3 +12,21 @@
 ```sh
 npx create-react-app my-app --template @theprivileges/cra-template-material-ui
 ```
+
+## Features
+
+Enhances the default [`cra-template`](https://github.com/facebook/create-react-app/tree/master/packages/cra-template)
+
+### UI
+
+- [Material-UI](https://material-ui.com)
+
+### Tools
+
+- [`husky`](https://github.com/typicode/husky)
+- [`lint-staged`](https://github.com/okonet/lint-staged)
+- [`yarnhook`](https://github.com/frontsideair/yarnhook)
+
+### Test
+
+- [Testing Library](https://testing-library.com/)
