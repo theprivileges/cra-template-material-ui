@@ -1,65 +1,102 @@
 {
-    "name": "@theprivileges/cra-template-material-ui",
-    "version": "0.0.0-development",
-    "description": "create react app custom template configured to use material-ui",
-    "private": false,
-    "engines": {
-        "node": ">=10"
-    },
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "semantic-release": "semantic-release",
-        "lint": "prettier-standard --check",
-        "format": "prettier-standard --lint"
-    },
-    "keywords": [
-        "cra-template",
-        "create-react-app",
-        "material-ui",
-        "react",
-        "template"
+  "private": false,
+  "name": "@theprivileges/cra-template-material-ui",
+  "description": "create react app custom template configured to use material-ui",
+  "license": "MIT",
+  "author": "Luiz Lopes <luiz@wickeddeveloper.com> (https://wickeddeveloper.com/)",
+  "homepage": "https://github.com/theprivileges/cra-template-material-ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theprivileges/cra-template-material-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/theprivileges/cra-template-material-ui/issues"
+  },
+  "version": "1.0.0-beta.1",
+  "main": "template.json",
+  "files": [
+    "template"
+  ],
+  "scripts": {
+    "format": "prettier-standard --lint",
+    "lint": "prettier-standard --check",
+    "semantic-release": "semantic-release",
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests --onlyChanged",
+    "test:ci": "jest --passWithNoTests --ci",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "devDependencies": {
+    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
+    "@testing-library/jest-dom": "^5.11.3",
+    "cross-env": "^7.0.2",
+    "cz-conventional-changelog": "3.2.0",
+    "eslint-plugin-testing-library": "^3.6.0",
+    "husky": "^4.2.5",
+    "jest": "^26.4.0",
+    "lint-staged": "^10.2.11",
+    "prettier-package-json": "^2.1.3",
+    "prettier-standard": "^16.4.1",
+    "react-test-renderer": "^16.13.1",
+    "semantic-release": "^17.1.1",
+    "yarnhook": "^0.4.3"
+  },
+  "keywords": [
+    "cra-template",
+    "create-react-app",
+    "material-ui",
+    "react",
+    "template"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "testing-library"
     ],
-    "author": "Luiz Lopes <luiz@wickeddeveloper.com> (https://wickeddeveloper.com/)",
-    "license": "MIT",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/theprivileges/cra-template-material-ui.git"
-    },
-    "bugs": {
-        "url": "https://github.com/theprivileges/cra-template-material-ui/issues"
-    },
-    "homepage": "https://github.com/theprivileges/cra-template-material-ui#readme",
-    "devDependencies": {
-        "@jedmao/semantic-release-npm-github-config": "^1.0.9",
-        "cz-conventional-changelog": "3.2.0",
-        "husky": "^4.2.5",
-        "lint-staged": "^10.2.11",
-        "prettier-standard": "^16.4.1",
-        "semantic-release": "^17.1.1",
-        "standard": "^14.3.4",
-        "yarnhook": "^0.4.3"
-    },
-    "config": {
-        "commitizen": {
-            "path": "./node_modules/cz-conventional-changelog"
-        }
-    },
-    "lint-staged": {
-        "*": [
-            "prettier-standard --lint"
-        ]
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged",
-            "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-            "post-checkout": "yarnhook",
-            "post-merge": "yarnhook",
-            "post-rewrite": "yarnhook"
-        }
-    },
-    "files": [
-        "template",
-        "template.json"
+    "extends": [
+      "plugin:testing-library/react"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
+      "post-checkout": "yarnhook",
+      "post-merge": "yarnhook",
+      "post-rewrite": "yarnhook"
+    }
+  },
+  "lint-staged": {
+    "*.{js,md}": [
+      "prettier-standard --lint"
+    ],
+    "template.json": [
+      "prettierx --write"
+    ],
+    "package.json": [
+      "prettier-package-json --write"
+    ]
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          "package.json",
+          "template.json"
+        ],
+        "options": {
+          "tabWidth": 2
+        }
+      }
+    ]
+  }
 }
