@@ -42,7 +42,7 @@
     "prettier-package-json": "^2.1.3",
     "prettier-standard": "^16.4.1",
     "react-test-renderer": "^16.13.1",
-    "semantic-release": "^17.1.1",
+    "semantic-release": "^19.0.3",
     "yarnhook": "^0.4.3"
   },
   "keywords": [
